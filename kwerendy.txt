@@ -1,0 +1,4 @@
+SELECT id,nazwa,opis,cena FROM `podzespoly` WHERE cena < 1000
+SELECT podzespoly.nazwa,podzespoly.opis FROM `podzespoly`INNER JOIN producenci ON podzespoly.producenci_id=producenci.id WHERE podzespoly.dostepnosc=1 AND producenci.nazwa="Intel"
+SELECT podzespoly.nazwa, producenci.nazwa FROM podzespoly, producenci WHERE podzespoly.producenci_id = producenci.id
+UPDATE producenci SET nazwa=UPPER(nazwa) WHERE nazwa="Patriot"
